@@ -16,7 +16,11 @@
 body {
   font-family: var(--primary-font);
   color: var(--main-text-color);
-  background-color: var(--white-color);
+  background-color: var(--white-color);  
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 img {
@@ -35,11 +39,25 @@ img {
 }
 
 .container {
-  width: 1158px;
-  padding-right: 15px;
+  max-width: 428px;
   padding-left: 15px;
-  margin: 0 auto;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+  
 
 .hidden-slogan {
   position: absolute;
@@ -337,7 +355,7 @@ img {
 
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -438,7 +456,13 @@ img {
   |============================
 */
 .whatwedo-section {
-  padding-bottom: 120px;
+  padding-bottom: 120px;  
+}
+
+@media screen and (max-width: 1199px) {
+  .whatwedo-section {
+    display: none;
+}
 }
 
 .whatwedo-list {
