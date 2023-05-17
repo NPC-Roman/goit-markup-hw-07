@@ -25,6 +25,8 @@ body.modal-open {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .list {
@@ -42,8 +44,7 @@ img {
   max-width: 428px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -55,6 +56,12 @@ img {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1158px;
+  }  
+}
+
+@media screen and (max-width: 1200px) {
+  .whatwedo-section {
+    display: none;    
   }
 }
   
@@ -457,12 +464,6 @@ img {
 */
 .whatwedo-section {
   padding-bottom: 120px;  
-}
-
-@media screen and (max-width: 1199px) {
-  .whatwedo-section {
-    display: none;
-}
 }
 
 .whatwedo-list {
