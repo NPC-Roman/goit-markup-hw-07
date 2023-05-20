@@ -121,6 +121,20 @@ img {
   }
 }
 
+.team-subject {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+
+  text-align: center;
+  text-transform: capitalize;
+
+  color: var(--dark-text-color);
+
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
 .text {
   font-weight: 500;
   font-size: 16px;
@@ -137,6 +151,23 @@ img {
   .text {
     font-weight: 400;
   }
+}
+
+.team-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--main-text-color);
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 /*---------TEAM-TEXT---------*/
 .team-item .text {
@@ -180,6 +211,12 @@ img {
   align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .header-nav {
+    padding: 24px 0;
+  }
+}
+
 .logo-web {
   font-family: var(--secondary-font);
   font-weight: 800;
@@ -190,7 +227,13 @@ img {
 
   color: var(--primary-color);
 
-  margin-right: 76px;
+  /*margin-right: 76px;*/
+}
+
+@media screen and (min-width: 768px) {
+  .logo-web {
+    margin-right: 76px;
+  }
 }
 
 .logo-studio {
@@ -271,8 +314,10 @@ img {
   display: flex;
 }
 
-.header-address-list li:not(:last-child) {
-  margin-right: 40px;
+@media screen and (min-width: 1158px) {
+  .header-address-list li:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .mail {
@@ -307,9 +352,15 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail-tel:hover,
-.mail-tel:focus,
-.mail-tel:active {
+.mail:hover,
+.mail:focus,
+.mail:active {
+  color: var(--hover-color);
+}
+
+.tel:hover,
+.tel:focus,
+.tel:active {
   color: var(--hover-color);
 }
 /*
@@ -1388,3 +1439,181 @@ input[type='checkbox'] {
 }
 }
 */
+@media screen and (max-width: 767px) {
+  .nav-disable {
+    display: none;
+  }
+}
+
+.logo-mobile {
+  display: flex;
+  align-items: center;
+}
+
+/*.hamburger-btn {
+  border: none;
+  background-color: var(--white-color);
+}*/
+
+.hamburger-svg {
+  stroke: var(--dark-text-color);
+
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);*/
+}
+/*
+  |============================
+  |----------------------------
+  |----------------------------
+  |----------------------------
+  |============================
+*/
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.close-btn {
+  fill: var(--dark-text-color);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  border: 1px solid rgba(46, 47, 66, 0.1);
+  border-radius: 50%;
+  background-color: rgba(231, 233, 252, 0.1);
+  height: 24px;
+  width: 24px;
+}
+
+/*
+.fill-btn {
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+*/
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 40px 40px 40px;
+  background-color: var(--white-color);
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--dark-text-color);
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+
+  color: var(--dark-text-color);
+}
+
+.mobile-menu:hover,
+.mobil-menu:focus {
+  color: var(--hover-color);
+}
+
+.mobil-menu.mobil-mail:hover,
+.mobil-menu.mobil-mail:focus {
+  color: var(--hover-color);
+}
+
+.mobile-menu.mobile-mail {
+  font-family: var(--primary-font);
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+
+  color: var(--main-text-color);
+}
+
+.mobile-menu .link {
+  display: block;
+
+  color: var(--dark-text-color);
+  text-decoration: none;
+}
+
+.mobil-menu {
+  gap: 54px;
+}
+
+.test-00 {
+  margin-bottom: auto;
+}
+
+.test-01 {
+  margin-bottom: 48px;
+}
+
+@media screen and (max-width: 1157px) {
+  .mail {
+    padding: 0;
+  }
+  .tel {
+    padding: 0;
+  }
+  .header-address-list {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+}
