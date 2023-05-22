@@ -464,12 +464,20 @@ img {
 
 .hero-background {
   /*/===MOBAL===/*/
+  /*background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/officepc@1x.jpg);*/
+
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/officepc@1x.jpg);
+    url(../images/heropic_1xmob.jpg);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -478,11 +486,41 @@ img {
   /*min-height: 432px;*/
   margin: auto auto;
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-background {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/heropic_2xmob.jpg);
+  }
+}
 /*/===TABLET===/*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .hero-background {
     max-width: 768px;
     /*min-height: 436px;*/
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/heropic_1xtab.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-background {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/heropic_2xmob.jpg);
+    }
   }
 }
 /*/===PC===/*/
@@ -490,22 +528,28 @@ img {
   .hero-background {
     max-width: 1440px;
     min-height: 600px;
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/heropic_1xpc.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-background {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/heropic_2xpc.jpg);
+    }
   }
 }
 
-@media (min-device-pixel-ratio: 2),  
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero-background { 
-    background-image: 
-    linear-gradient(
-      to bottom,
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-   url(../images/officemob@2x.jpg);
-  }
-}
 /*
   |============================
   |-----------MODAL------------
