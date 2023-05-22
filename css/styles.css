@@ -29,7 +29,7 @@ body.modal-open {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -469,7 +469,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/peopleofficeone.jpg);
+    url(../images/officepc@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
