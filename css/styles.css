@@ -582,8 +582,8 @@ img {
 
   padding: 72px 24px 24px 24px;
 
-  width: 408px;
-  min-height: 576px;
+  /*width: 408px;*/
+  /*min-height: 576px;*/
 
   background-color: var(--modal-backgound-color);
   border-radius: 4px;
@@ -595,8 +595,9 @@ img {
 
 @media screen and (max-width: 768px) {
   .modal {
-    min-width: 392px;
-    min-height: 584px;
+    width: 100%;
+    /*max-width: 392px;*/
+    /*min-height: 584px;*/
   }
 }
 
@@ -1000,7 +1001,8 @@ footer .socials-link:active {
   margin: 0;
 
   max-width: 398px;
-  min-width: 300px;
+  width: 100%;
+  /*min-width: 300px;*/
   height: 40px;
 
   border: 1px solid var(--white-color);
@@ -1351,7 +1353,8 @@ footer .socials-link:active {
 .modal-item input {
   padding-left: 38px;
 
-  width: 360px;
+  width: 100%;
+  /*width: 360px;*/
   height: 40px;
 
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1401,7 +1404,8 @@ footer .socials-link:active {
 
   padding: 16px 8px 16px 8px;
 
-  width: 360px;
+  width: 100%;
+  /*width: 360px;*/
   height: 120px;
 
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1438,6 +1442,7 @@ footer .socials-link:active {
 
 .checkbox-icon {
   position: relative;
+  flex-shrink: 0;
 
   width: 16px;
   height: 16px;
@@ -1741,7 +1746,13 @@ input[type='checkbox'] {
 }
 
 .socials-menu {
-  gap: 54px;
+  gap: 24px;
+}
+
+@media screen and (min-width: 427px) {
+  .socials-menu {
+    gap: 54px
+  }
 }
 
 .nav-menu {
